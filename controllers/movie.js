@@ -60,7 +60,7 @@ module.exports.processAddPage = (req, res, next) => {
         Genre: req.body.Genre
 
     });
-
+    //create a new object of movie
     Movie.create(newItem, (err, item) => {
         if (err) {
             console.log(err);
@@ -117,7 +117,7 @@ module.exports.processEditPage = (req, res, next) => {
             res.end(err);
         } else {
             // console.log(req.body);
-            // refresh the book list
+            // refresh the movie list
             res.redirect('/movie/list');
         }
     });
@@ -134,7 +134,7 @@ module.exports.performDelete = (req, res, next) => {
             console.log(err);
             res.end(err);
         } else {
-            // refresh the book list
+            // refresh the movie list
             res.redirect('/movie/list');
         }
     });
