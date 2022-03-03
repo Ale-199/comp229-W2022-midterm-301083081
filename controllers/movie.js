@@ -42,7 +42,7 @@ module.exports.displayAddPage = (req, res, next) => {
     let newItem = Movie();
 
     res.render('movie/add_edit', {
-        title: 'Update a new business contact list',
+        title: 'Add a new movie list',
         movie: newItem,
     })
 }
@@ -86,7 +86,7 @@ module.exports.displayEditPage = (req, res, next) => {
         } else {
             //show the edit view
             res.render('movie/add_edit', {
-                title: 'Edit the contact list',
+                title: 'Edit a movie list',
                 movie: itemToEdit,
 
             })
